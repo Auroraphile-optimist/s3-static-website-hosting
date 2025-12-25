@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Professional Photography Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fffaeb',
+                            100: '#fef0c7',
+                            200: '#fde08a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b', // Main Gold
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-semibold tracking-wider hover:text-gold-500 transition-colors">LUMINA</a>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-zinc-400">
+                <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center text-center px-4 hero-bg">
+        <div class="z-10 max-w-4xl space-y-6 animate-fade-in-up">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-medium leading-tight tracking-tight">
+                Capturing <span class="italic text-gold-500">Life's</span> <br> Finer Moments
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-300 font-light max-w-2xl mx-auto leading-relaxed">
+                Specializing in cinematic landscapes, emotive portraits, and abstract fine art photography.
+            </p>
+            <div class="pt-8">
+                <a href="#gallery" class="inline-block border border-white/30 bg-white/5 backdrop-blur-sm px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                    View Portfolio
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <span class="text-gold-500 text-sm uppercase tracking-widest font-medium block mb-2">Selected Works</span>
+                    <h2 class="text-4xl md:text-5xl font-serif">Visual Stories</h2>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <p class="text-zinc-500 max-w-sm text-sm leading-relaxed text-right md:text-left">
+                        A curation of recent projects exploring light, shadow, and human connection across the globe.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[400px]">
+                
+                <!-- Landscape: Large Wide Item -->
+                <div class="group relative overflow-hidden md:col-span-2 row-span-1 border border-white/5 bg-zinc-900 cursor-pointer">
+                    <img src="images/gallery_landscape.png" alt="Landscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif">Golden Horizon</h3>
+                        <p class="text-zinc-400 text-sm">Iceland</p>
+                    </div>
+                </div>
+
+                <!-- Portrait: Tall Item -->
+                <div class="group relative overflow-hidden md:col-span-1 lg:row-span-2 border border-white/5 bg-zinc-900 cursor-pointer">
+                    <img src="images/gallery_portrait.png" alt="Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif">The Artist</h3>
+                        <p class="text-zinc-400 text-sm">Studio Series</p>
+                    </div>
+                </div>
+
+                <!-- Abstract: Square Item -->
+                <div class="group relative overflow-hidden border border-white/5 bg-zinc-900 cursor-pointer">
+                    <img src="images/gallery_abstract.png" alt="Abstract" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif">Modern Angles</h3>
+                        <p class="text-zinc-400 text-sm">Architecture</p>
+                    </div>
+                </div>
+
+                <!-- Nature: Square Item -->
+                <div class="group relative overflow-hidden border border-white/5 bg-zinc-900 cursor-pointer">
+                    <img src="images/gallery_nature.png" alt="Nature" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif">Morning Dew</h3>
+                        <p class="text-zinc-400 text-sm">Macro</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-zinc-900 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl font-serif">Let's Create Together</h2>
+                <p class="text-zinc-400 font-light">Available for commissions and collaborations worldwide.</p>
+            </div>
+
+            <form class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label for="name" class="text-xs uppercase tracking-widest text-zinc-500">Name</label>
+                        <input type="text" id="name" class="w-full bg-zinc-950 border border-white/10 p-4 text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="John Doe">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="email" class="text-xs uppercase tracking-widest text-zinc-500">Email</label>
+                        <input type="email" id="email" class="w-full bg-zinc-950 border border-white/10 p-4 text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="message" class="text-xs uppercase tracking-widest text-zinc-500">Message</label>
+                    <textarea id="message" rows="5" class="w-full bg-zinc-950 border border-white/10 p-4 text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="Tell me about your project..."></textarea>
+                </div>
+
+                <div class="text-center pt-8">
+                    <button type="submit" class="bg-gold-500 text-black font-medium text-sm uppercase tracking-widest px-10 py-4 hover:bg-gold-400 transition-colors">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-zinc-950 border-t border-white/5 text-center text-zinc-600 text-sm">
+        <p>&copy; 2024 Lumina Photography. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
